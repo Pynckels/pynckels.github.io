@@ -10,6 +10,7 @@
 
     Block network trafic to and from 137.184.228.130
     Block network trafic to and from Phot0.cr9pa.xyz, Phot0.hgy9t.xyz, Phot0.jgl9t.com, Phot0.php3d.online, Phot0.swq2q.com, Photo.gwx5q.com, Phot0.fnx4p.com, Phot0.jh4s.ques, Phot0.tr5se.com
+    Block files containing significant code snippets of the malware
 
 ## 1. Attack vector
 
