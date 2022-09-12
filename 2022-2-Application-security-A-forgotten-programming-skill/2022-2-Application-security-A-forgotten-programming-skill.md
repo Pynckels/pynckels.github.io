@@ -1,5 +1,7 @@
 # Application security - A forgotten programming skill
 
+Published on August 23, 2022
+
 ![Splash image](https://github.com/Pynckels/pynckels.github.io/blob/main/2022-2-Application-security-A-forgotten-programming-skill/2022-2-Application-security-A-forgotten-programming-skill.png)
 
 #applicationsecurity, #c, #bufferoverflow, #apisecurity
