@@ -1,12 +1,14 @@
 # Application security - A forgotten programming skill
 
+![Splash image](https://github.com/Pynckels/pynckels.github.io/blob/main/2022-2-Application-security-A-forgotten-programming-skill/2022-2-Application-security-A-forgotten-programming-skill.png)
+
 #applicationsecurity, #c, #bufferoverflow, #apisecurity
 
 *At the beginning of 2022, it was, and still is, common understanding that api security is a hot item. There is, however, an intersection between api security and other security domains that is often not taken into account. Where API security is often focused on knowledge of network protocols and fuzzing of interfaces, a deeper danger lurks below the surface. A danger that is almost as old as information technology itself, and still very much disregarded. Disregarded during education and disregarded in the field. The name of that danger is **application security**.*
 
 *The goal of this article is not to cover the entire field of application security, but to give one of the most basic and yet most striking examples of an application security glitch that is used all over the place to teach the C programming language.*
 
-The intersection between api security and application security
+## The intersection between api security and application security
 
 Both api security and application security are broad and sometimes complex knowledge domains. However, api's are made available on servers all over the world for all kinds of purposes. The software on the servers is written in a plethora of programming languages. And therein lays one of the dangers. In fact, this danger is not so much the programming language, but rather a programmer who is not aware of the danger of certain programming constructs.
 
