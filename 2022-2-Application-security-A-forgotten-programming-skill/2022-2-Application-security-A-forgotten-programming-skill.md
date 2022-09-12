@@ -17,26 +17,25 @@ Both api security and application security are broad and sometimes complex knowl
 The buffer overflow danger is a general problem that is compromising information systems in all kinds of ways. And in the same way, a lot of other application security issues are immediately influencing the functioning of servers, operating systems, games, financial and banking systems, ...
 
 This article focuses on an example of a danger that is often spoon fed to future C programmers during their first day of C programming. It should be clear that every programming language that I have used (41 in total) has its own benefits and its own dangerous constructs. So, the idea is not to shoot on the C programming language or on C programmers and teachers, but to show how easy it is to make application security errors, and how easy it is to integrate the application security aspect in a programming course. Below, the danger of buffer overflows due to a lack of understanding of the scanf function will be demonstrated.
-Teaching C: second example, first security error
+
+## Teaching C: second example, first security error
 
 In most programming language courses, and C is not an exception, the Hello World program is the first example. The second example is often something like the following:
 
-#include <stdio.h>
-
-
-void main()
-{
-    char buffer[50];
-
-    puts("What is your name?");
-    scanf("%s", buffer);
-    printf("Hello %s", buffer);
-}
+    #include <stdio.h>
+    
+    void main()
+    {
+        char buffer[50];
+    
+        puts("What is your name?");
+        scanf("%s", buffer);
+        printf("Hello %s", buffer);
+    }
 
 It is further explained that compiling this program can be done with a compiler like gcc, clang, ...
 
-
-gcc -o example2 example2.c
+    gcc -o example2 example2.c
 
 And with this second example, the first application security error is introduced in the young eager programmers minds...
 
@@ -44,13 +43,13 @@ The problem in question, as stated above, is a buffer overflow error. It goes wi
 
 In order to demonstrate the exploitation of a buffer overflow in a less complex way, we will
 
-    make the compiled program larger, so to have enough computer instructions to choose from.
-    prevent dynamic linkage, so to have a less complex exploit as a first acquaintance with the subject.
+* make the compiled program larger, so to have enough computer instructions to choose from.
+* prevent dynamic linkage, so to have a less complex exploit as a first acquaintance with the subject.
 
 Both objectives can be achieved by linking the standard C library (libc.so.6) with the compiled code.
 
 
-gcc --static -o example2 example2.c
+    gcc --static -o example2 example2.c
 
 It should be noted that once one gets a grasp on buffer overflow exploitation, one can circumvent dynamic linkage.
 
