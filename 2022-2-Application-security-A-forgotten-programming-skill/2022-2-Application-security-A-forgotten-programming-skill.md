@@ -48,7 +48,6 @@ In order to demonstrate the exploitation of a buffer overflow in a less complex 
 
 Both objectives can be achieved by linking the standard C library (libc.so.6) with the compiled code.
 
-
     gcc --static -o example2 example2.c
 
 It should be noted that once one gets a grasp on buffer overflow exploitation, one can circumvent dynamic linkage.
@@ -56,61 +55,59 @@ It should be noted that once one gets a grasp on buffer overflow exploitation, o
 It should also be noted that most compilers have the option to use other constructs to make the life of a buffer overflow exploiter more interesting, such as stack reorganization with canaries, position independent code (PIE), ... A default compilation with for instance gcc does not activate canaries. This has as a consequence that the young eager programmers minds are not aware of these compiler options. And since the rest of the course does not mention the options in question neither...
 
 Of course, as is the case with dynamic linkage and position independent code, canaries can be bypassed also. But it takes a little more craftsmanship of the buffer overflow exploiter. To reduce complexity during this first introduction, and to create an example that is as close as possible to the beginning programmers experience, we will not introduce extra security compiler flags. This is not done in most of the programming courses anyway. So we stay close to the reality with our example.
-The first analysis of the application security problem.
-Where is the sweet spot
+
+## The first analysis of the application security problem.
+
+### Where is the sweet spot
 
 For the rest of this article, we will use the above C source, but call it helloHack.c The compiled program is called helloHack.
 
 When executed, the program asks for a name. We will generate a string with python. We will vary the length of the generated string up until the 'sweet spot' is reached, being the first length where the program generates a segmentation fault.
 
+    python -c "print('A'*72)"
 
-python -c "print('A'*72)"
-
-The extent of the problem
+### The extent of the problem
 
 To get a more detailed view of the opportunity that the application error gives us, we will debug the compiled code with gdb.
 
+    gdb ./helloHack
 
-gdb ./helloHack
-
-  break main
-  run
-  disassemble
+      break main
+      run
+      disassemble
 
 We can now see the compiled version of the code:
 
-
-   0x0000000000401805 <+0>:     push   rb
-   0x0000000000401806 <+1>:     mov    rbp,rsp
-=> 0x0000000000401809 <+4>:     sub    rsp,0x40
-   0x000000000040180d <+8>:     lea    rax,[rip+0xa37f0]        # 0x4a5004
-   0x0000000000401814 <+15>:    mov    rdi,rax
-   0x0000000000401817 <+18>:    call   0x417f40 <puts>
-   0x000000000040181c <+23>:    lea    rax,[rbp-0x40]
-   0x0000000000401820 <+27>:    mov    rsi,rax
-   0x0000000000401823 <+30>:    lea    rax,[rip+0xa37ed]        # 0x4a5017
-   0x000000000040182a <+37>:    mov    rdi,rax
-   0x000000000040182d <+40>:    mov    eax,0x0
-   0x0000000000401832 <+45>:    call   0x409f20 <__isoc99_scanf>
-   0x0000000000401837 <+50>:    lea    rax,[rbp-0x40]
-   0x000000000040183b <+54>:    mov    rsi,rax
-   0x000000000040183e <+57>:    lea    rax,[rip+0xa37d5]        # 0x4a501a
-   0x0000000000401845 <+64>:    mov    rdi,rax
-   0x0000000000401848 <+67>:    mov    eax,0x0
-   0x000000000040184d <+72>:    call   0x409d90 <printf>
-   0x0000000000401852 <+77>:    nop
-   0x0000000000401853 <+78>:    leave  
-   0x0000000000401854 <+79>:    ret    
+       0x0000000000401805 <+0>:     push   rb
+       0x0000000000401806 <+1>:     mov    rbp,rsp
+    => 0x0000000000401809 <+4>:     sub    rsp,0x40
+       0x000000000040180d <+8>:     lea    rax,[rip+0xa37f0]        # 0x4a5004
+       0x0000000000401814 <+15>:    mov    rdi,rax
+       0x0000000000401817 <+18>:    call   0x417f40 <puts>
+       0x000000000040181c <+23>:    lea    rax,[rbp-0x40]
+       0x0000000000401820 <+27>:    mov    rsi,rax
+       0x0000000000401823 <+30>:    lea    rax,[rip+0xa37ed]        # 0x4a5017
+       0x000000000040182a <+37>:    mov    rdi,rax
+       0x000000000040182d <+40>:    mov    eax,0x0
+       0x0000000000401832 <+45>:    call   0x409f20 <__isoc99_scanf>
+       0x0000000000401837 <+50>:    lea    rax,[rbp-0x40]
+       0x000000000040183b <+54>:    mov    rsi,rax
+       0x000000000040183e <+57>:    lea    rax,[rip+0xa37d5]        # 0x4a501a
+       0x0000000000401845 <+64>:    mov    rdi,rax
+       0x0000000000401848 <+67>:    mov    eax,0x0
+       0x000000000040184d <+72>:    call   0x409d90 <printf>
+       0x0000000000401852 <+77>:    nop
+       0x0000000000401853 <+78>:    leave  
+       0x0000000000401854 <+79>:    ret    
 
 We can see that the main function first calls the puts function, then the scanf function and finally the printf function. We can place an extra break-point just before the call to scanf and an other break-point just after the call to scanf. At both places, we will take a look at the stack.
 
-
-  break *(main+45)
-  break *(main+50)
-  continue
-                    <- analyze stack contents
-  continue
-                    <- analyze stack contents
+      break *(main+45)
+      break *(main+50)
+      continue
+                        <- analyze stack contents
+      continue
+                        <- analyze stack contents
 
 The stack before calling scanf looks like:
 
