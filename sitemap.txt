@@ -18,3 +18,4 @@ https://pynckels.github.io/2020-4-Random_number_generator_ver_2-0.pdf
 https://pynckels.github.io/2021-1-Security-Microsoft-can-secretly-update-Raspberry-OS.pdf
 https://pynckels.github.io/2022-1-TB7mT95P-info.md
 https://pynckels.github.io/2022-2-Application-security-A-forgotten-programming-skill.md
+https://pynckels.github.io/2024-2-talrezew-info.md
