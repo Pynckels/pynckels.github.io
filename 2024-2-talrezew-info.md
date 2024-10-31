@@ -307,4 +307,146 @@
     
 ## 6. Analysis of the third stage of the attack
 
-    TO BE CONTINUED...
+#### 6.1 URLs
+
+    The URL mentioned in point 5.1 loads a HTML page that executes an elaborate obfuscated script that calls the following URL's when executed on a Raspberry Pi:
+
+    http://talrezew.net/sftouch?userId=008104eb447a4129f7b04a20f821c957&z=4654468&p_rid=ae145dbe-e2a2-44cf-9d51-629d2252c992&p_src=sf&branchId=0&rb=sztYDr1txxIYI5kk0ytUgI3ClC9_JzU0AidVMVzC3X3ViuPDQVmVk--ZPbbW5zQ14VbXvAU4WYpOIWGlDmCER235RjSwHoILmJC9JlKYkMH47QKXrjsYbB9C1VhrswViUr0gDxEPC-dAeBR8zmxmAuRr85flCBJ0bR_wZuGTT8v65xru&w_img=1
+
+    http://talrezew.net/log/add?cid=1db9169f-90f4-4b2d-b517-bc47aab19c1f&ruid=ae145dbe-e2a2-44cf-9d51-629d2252c992
+
+    http://talrezew.net/async_log/add?cid=1db9169f-90f4-4b2d-b517-bc47aab19c1f&ruid=ae145dbe-e2a2-44cf-9d51-629d2252c992
+
+    http://talrezew.net/?z=4654468&syncedCookie=true&rhd=false
+
+    https://my.rtmark.net/img.gif?f=merge&userId=008104eb447a4129f7b04a20f821c957&z=4654468&p_rid=ae145dbe-e2a2-44cf-9d51-629d2252c992&p_src=sf
+
+#### 6.2 WhoIs
+
+    Domain Name: TALREZEW.NET
+    Registry Domain ID: 2912931623_DOMAIN_NET-VRSN
+    Registrar WHOIS Server: whois.pananames.com
+    Registrar URL: http://www.pananames.com
+    Updated Date: 2024-08-31T22:30:07Z
+    Creation Date: 2024-08-31T22:30:05Z
+    Registrar Registration Expiration Date: 2025-08-31T22:30:05Z
+    Registrar: URL SOLUTIONS INC.
+    Registrar IANA ID: 1449
+    Registrar Abuse Contact Email: abuse@pananames.com
+    Registrar Abuse Contact Phone: +1.4692250522
+    Reseller: 
+    Domain Status: clientTransferProhibited -- https://icann.org/epp#clientTransferProhibited
+    Registry Registrant ID:
+    Registrant Name: Private Whois
+    Registrant Organization: GLOBAL DOMAIN PRIVACY SERVICES INC
+    Registrant Street: Tower Financial Center Flr 35, 50th St y E. Mendez St
+    Registrant City: Panama
+    Registrant State/Province: NA
+    Registrant Postal Code: NA
+    Registrant Country: PA
+    Registrant Phone: +1.4692250522
+    Registrant Phone Ext: 
+    Registrant Fax: 
+    Registrant Fax Ext: 
+    Registrant Email: talrezew.net.x4woseufnjfg@domains-anonymizer.com
+    Registry Admin ID:
+    Admin Name: Private Whois
+    Admin Organization: GLOBAL DOMAIN PRIVACY SERVICES INC
+    Admin Street: Tower Financial Center Flr 35, 50th St y E. Mendez St
+    Admin City: Panama
+    Admin State/Province: NA
+    Admin Postal Code: NA
+    Admin Country: PA
+    Admin Phone: +1.4692250522
+    Admin Phone Ext: 
+    Admin Fax: 
+    Admin Fax Ext: 
+    Admin Email: admin.talrezew.net.x4woseufnjfg@domains-anonymizer.com
+    Registry Tech ID:
+    Tech Name: Private Whois
+    Tech Organization: GLOBAL DOMAIN PRIVACY SERVICES INC
+    Tech Street: Tower Financial Center Flr 35, 50th St y E. Mendez St
+    Tech City: Panama
+    Tech State/Province: NA
+    Tech Postal Code: NA
+    Tech Country: PA
+    Tech Phone: +1.4692250522
+    Tech Phone Ext: 
+    Tech Fax: 
+    Tech Fax Ext: 
+    Tech Email: tech.talrezew.net.x4woseufnjfg@domains-anonymizer.com
+    Name Server: NS-1150.AWSDNS-15.ORG
+    Name Server: NS-1635.AWSDNS-12.CO.UK
+    Name Server: NS-215.AWSDNS-26.COM
+    Name Server: NS-825.AWSDNS-39.NET
+    DNSSEC: Unsigned
+    >>> Last update of WHOIS database: 2024-08-31T22:30:07Z <<<
+
+    Domain Name: RTMARK.NET
+    Registry Domain ID: 1882699297_DOMAIN_NET-VRSN
+    Registrar WHOIS Server: whois.pananames.com
+    Registrar URL: http://www.pananames.com
+    Updated Date: 2024-09-29T06:03:42Z
+    Creation Date: 2014-10-29T10:13:55Z
+    Registrar Registration Expiration Date: 2025-10-29T10:13:55Z
+    Registrar: URL SOLUTIONS INC.
+    Registrar IANA ID: 1449
+    Registrar Abuse Contact Email: abuse@pananames.com
+    Registrar Abuse Contact Phone: +1.4692250522
+    Reseller: 
+    Domain Status: clientTransferProhibited -- https://icann.org/epp#clientTransferProhibited
+    Registry Registrant ID:
+    Registrant Name: REDACTED FOR PRIVACY
+    Registrant Organization: REDACTED FOR PRIVACY
+    Registrant Street: REDACTED FOR PRIVACY
+    Registrant City: REDACTED FOR PRIVACY
+    Registrant State/Province: REDACTED FOR PRIVACY
+    Registrant Postal Code: REDACTED FOR PRIVACY
+    Registrant Country: REDACTED FOR PRIVACY
+    Registrant Phone: REDACTED FOR PRIVACY
+    Registrant Phone Ext: REDACTED FOR PRIVACY
+    Registrant Fax: REDACTED FOR PRIVACY
+    Registrant Fax Ext: REDACTED FOR PRIVACY
+    Registrant Email: rtmark.net.25ece6hhghx30@domains-anonymizer.com
+    Registry Admin ID:
+    Admin Name: REDACTED FOR PRIVACY
+    Admin Organization: REDACTED FOR PRIVACY
+    Admin Street: REDACTED FOR PRIVACY
+    Admin City: REDACTED FOR PRIVACY
+    Admin State/Province: REDACTED FOR PRIVACY
+    Admin Postal Code: REDACTED FOR PRIVACY
+    Admin Country: REDACTED FOR PRIVACY
+    Admin Phone: REDACTED FOR PRIVACY
+    Admin Phone Ext: REDACTED FOR PRIVACY
+    Admin Fax: REDACTED FOR PRIVACY
+    Admin Fax Ext: REDACTED FOR PRIVACY
+    Admin Email: admin.rtmark.net.25ece6hhghx30@domains-anonymizer.com
+    Registry Tech ID:
+    Tech Name: REDACTED FOR PRIVACY
+    Tech Organization: REDACTED FOR PRIVACY
+    Tech Street: REDACTED FOR PRIVACY
+    Tech City: REDACTED FOR PRIVACY
+    Tech State/Province: REDACTED FOR PRIVACY
+    Tech Postal Code: REDACTED FOR PRIVACY
+    Tech Country: REDACTED FOR PRIVACY
+    Tech Phone: REDACTED FOR PRIVACY
+    Tech Phone Ext: REDACTED FOR PRIVACY
+    Tech Fax: REDACTED FOR PRIVACY
+    Tech Fax Ext: REDACTED FOR PRIVACY
+    Tech Email: tech.rtmark.net.25ece6hhghx30@domains-anonymizer.com
+    Name Server: NS01.RTMARK.NET
+    Name Server: NS11.RTMARK.NET
+    Name Server: NS21.RTMARK.NET
+    DNSSEC: Unsigned
+    >>> Last update of WHOIS database: 2024-09-29T06:03:42Z <<<
+
+#### 6.3 Rtmark.net
+
+    The URL rtmark.net points to
+
+        https://s3-eu-west-1.amazonaws.com
+
+    And mentions the name
+
+        Samoukale
+
