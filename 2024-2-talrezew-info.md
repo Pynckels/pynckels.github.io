@@ -11,6 +11,13 @@
 
     Block network trafic to and from 139.45.197.244
     Block network trafic to and from talrezew.net
+    Block network trafic to and from my.rtmark.net
+    Block network trafic to and from fooshoafoat.com
+    Block network trafic to and from r11.o.lencr.org
+    Block network trafic to and from ormedion.com
+    Block network trafic to and from ocsp.r2m03.amazontrust.com
+    Block network trafic to and from account.linktrust.com
+    Block network trafic to and from r10.o.lencr.org
 
 #### Secundary security measures
 
@@ -450,6 +457,19 @@
 
         Samoukale
 
-#### 6.4 Talrezew.net HTML
+    It is mentioned by the urlquery.net site as "a monster under the bed"
+
+        https://urlquery.net/report/a8b665ee-7d89-4974-ab6d-760484e4231c
+
+    together with some other URLs like there are
+
+        fooshoafoat.com
+        r11.o.lencr.org
+        ormedion.com
+        ocsp.r2m03.amazontrust.com
+        account.linktrust.com
+        r10.o.lencr.org
+
+#### 6.4.2 Talrezew.net HTML
 
     TO BE CONTINUED...
