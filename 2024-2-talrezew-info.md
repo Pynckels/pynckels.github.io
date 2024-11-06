@@ -50,6 +50,12 @@ Oct 29th, 2024
 * Block network trafic to and from www.highqualitylinkclicks.com
 * Block network trafic to and from www.craftybyte42.com
 
+#### Teriary security measures
+
+* Block webpages with signatures in major parts of 6.4.1
+* Block webpages with signatures in major parts of 6.4.2
+* Block webpages with signatures in major parts of 6.4.3
+
 ## 1. Attack vector
 
 A Phishing mail is sent to the potential victim.
@@ -170,13 +176,13 @@ To make a long story short: when the user goes to the browser history and clicks
 #### 3.3 Open ports (masscan / nmap -sV -sC --version-intensity 9 34.117.79.165 -p <port> )
 
     Nmap scan report for 165.79.117.34.bc.googleusercontent.com (34.117.79.165)
-    
+
     PORT    STATE SERVICE   VERSION
-    
+
     80/tcp  open  http      nginx
     |_http-server-header: nginx
     |_http-title: Performance Marketing Platform
-    
+
     443/tcp open  ssl/https nginx
     |_  http/1.1
     | ssl-cert: Subject: commonName=hb6trk.com
@@ -185,9 +191,9 @@ To make a long story short: when the user goes to the browser history and clicks
     |_http-title: Performance Marketing Platform
     |_ssl-date: TLS randomness does not represent time
     |_http-server-header: nginx
-    
+
     2 services unrecognized despite returning data.     
-    
+
     Aggressive OS guesses:
         Crestron XPanel control system (89%)
         FreeBSD 11.0-CURRENT (87%)
@@ -199,7 +205,7 @@ To make a long story short: when the user goes to the browser history and clicks
         FreeBSD 11.0-STABLE (86%)
         FreeBSD 11.1-RELEASE (86%)
         FreeBSD 11.1-STABLE (86%)
-    
+
 #### 3.4 Location (https://www.ip2location.com/demo/34.117.79.165)
 
     IP               Country                   Region      City         ISP               Domain            Coordinates (N,W)
@@ -274,11 +280,11 @@ the browser is redirected to
     Initiating SYN Stealth Scan
     Scanning 1 hosts [65535 ports/host]
     Discovered open port 80/tcp on 139.45.197.244                                  
-    
+
     PORT   STATE SERVICE VERSION
     80/tcp open  http    nginx
     |_http-title: 403 Forbidden
-    
+
     Aggressive OS guesses:
         Crestron XPanel control system (89%)
         ASUS RT-N56U WAP (Linux 3.4) (87%)
@@ -288,7 +294,7 @@ the browser is redirected to
         AXIS 210A or 211 Network Camera (Linux 2.6.17) (86%)
         MikroTik RouterOS 6.0 (86%)
         Linux 4.10 (86%)
-    
+
     No exact OS matches for host (test conditions non-ideal).
 
 #### 5.4 Location (https://www.ip2location.com/demo/34.117.79.165)
@@ -304,7 +310,7 @@ the browser is redirected to
 #### 5.6 robots.txt
 
     No robots.txt file available
-    
+
     HTTP request sent, awaiting response... 403 Forbidden
     2024-10-29 16:18:17 ERROR 403: Forbidden.
 
@@ -389,7 +395,7 @@ The URL mentioned in point 5.1 loads a HTML page that executes an elaborate obfu
     Name Server: NS-825.AWSDNS-39.NET
     DNSSEC: Unsigned
     >>> Last update of WHOIS database: 2024-08-31T22:30:07Z <<<
-    
+
     Domain Name: RTMARK.NET
     Registry Domain ID: 1882699297_DOMAIN_NET-VRSN
     Registrar WHOIS Server: whois.pananames.com
@@ -471,6 +477,467 @@ together with some other URLs like there are
 * account.linktrust.com
 * r10.o.lencr.org
 
+#### 6.4 Signature of the script at http://talrezew.net/?z=4654468&syncedCookie=true&rhd=false
+
+Major parts of the following can be uses as malware signature
+
+##### 6.4.1 First malware signature (search for parts, without whitespace)
+
+    T: 'chfu',
+    K: 'shapgvba',
+    Y: 'po',
+    z: 'qngnfrg',
+    q: 2,
+    S: 3,
+    m: 4,
+    W: 5,
+    v: 6,
+    i: 7,
+    p: 8,
+    V: 9,
+    y: 10,
+    R: 11,
+    D: 12,
+    f: 13,
+    Q: 14,
+    G: 15,
+    X: 16,
+    U: 17,
+    c: 18,
+    b: 19,
+    B: 20,
+    n: 21,
+    k: 22,
+    w: 23,
+    e: 24,
+    A: 25,
+    N: 'pheeragFpevcg',
+    F: 'HEY',
+    P: '__qf3qpi__',
+    H: 'yratgu',
+    o: '__qf3qpI__',
+    O: '(=([^&#]*)|&|#|$)',
+    M: '=(.*)$',
+    Z: 'uers',
+    t: 'gehr',
+    r: 'KZYUggcErdhrfg',
+    J: 'trgOnggrel',
+    C: 'zrgubq',
+    l: 'ercynpr',
+    s: '\\$&',
+    h: '[?&]',
+    I: 'ybpngvba',
+    L: 'rkrp',
+    x: '',
+    j: 'urnqref',
+    a: '&ehvq=',
+    ug: 'e_hvq',
+    gg: 'xrlf',
+    Eg: 'pyvrag_vq',
+    dg: 'haxabja',
+    Tg: 'nssvyvngr_vq',
+    Kg: 'genssvp_fbhepr_vq',
+    Yg: 'nqiregvfre_vq',
+    zg: 'pnzcnvta_vq',
+    qg: 'phfgbz_vq_1',
+    Sg: 'phfgbz_vq_2',
+    mg: 'pyvpx_vq',
+    Wg: 'pbfg',
+    vg: 'wfgnt',
+    ig: 'bn_vq',
+    pg: 'nqqvgvbany_vqf',
+    Vg: 'nofbyhgr',
+    yg: '50%',
+    Rg: '9999',
+    Dg: '1ck',
+    fg: 'genafcnerag',
+    Qg: 'sGlcr',
+    Gg: 'punapr',
+    Xg: 'sybbe',
+    Ug: 'pyvragVq',
+    cg: 'nkpvq',
+    bg: 'genssvpFbheprVq',
+    Bg: 'nkgfvq',
+    ng: 'nssvyvngrVq',
+    kg: 'nknssvq',
+    wg: 'nqiregvfreVq',
+    eg: 'nknqivq',
+    Ag: 'pnzcnvtaVq',
+    Ng: 'nkpnzvq',
+    Fg: 'phfgbzVq1',
+    Pg: 'nkphfvq1',
+    Hg: 'phfgbzVq2',
+    og: 'nkphfvq2',
+    Og: 'pyvpxVq',
+    Mg: 'pyvq',
+    Zg: 'nksg',
+    tg: 'sHey',
+    rg: 'nksh',
+    Jg: 'gvgyr',
+    Cg: 'nkgvg',
+    lg: 'gbYbjrePnfr',
+    sg: 'fgevatvsl',
+    hg: 'fraq',
+    Ig: 'cnefr',
+    Lg: 'ehVq',
+    xg: 'bnVq',
+    jg: 'perngrRyrzrag',
+    ag: 'qvi',
+    uE: 'frgNggevohgr',
+    gE: 'vq',
+    EE: 'nqrk',
+    dE: 'cbfvgvba',
+    TE: 'gbc',
+    KE: 'yrsg',
+    YE: 'mVaqrk',
+    zE: 'jvqgu',
+    qE: 'urvtug',
+    SE: 'onpxtebhaqPbybe',
+    mE: 'orsber',
+    WE: 'vf_ong',
+    vE: 'punetvat',
+    iE: 'punetvat_gvzr',
+    pE: 'qvfpunetvat_gvzr',
+    VE: 'yriry',
+    yE: '{(.*?)\\}',
+    RE: 101,
+    DE: 'sbeRnpu',
+    fE: '[\\[\\]]',
+    QE: 't',
+    GE: 'frnepuCnenzf',
+    XE: 'ovaq',
+    UE: '/nqq?pvq=',
+    cE: 'nqqvgvbanyVqf',
+    bE: 'bagbhpufgneg',
+    BE: 'gf_qrgrpgrq',
+    nE: 'CyhtvaNeenl',
+    kE: 'trgTnzrcnqf',
+    wE: 'pbybe_tnzhg',
+    eE: 'puebzr',
+    AE: 'ybnqGvzrf',
+    NE: 'cyngsbez_qrgrpgbe',
+    FE: 'fglyr',
+    PE: 'trg',
+    HE: 'bcra',
+    oE: 'CBFG',
+    OE: '-2',
+    ME: 'znkGbhpuCbvagf',
+    ZE: ';',
+    tE: 'jroqevire',
+    rE: 'tnzrcnqf',
+    JE: 'pfv',
+    CE: 'pyg',
+    lE: 'vf_naqebvq',
+    sE: 'vf_gevqrag',
+    hE: 'vf_puebzvhz_86_be_arjre',
+    IE: 'vf_puebzvhz',
+    LE: 'vf_rqtr',
+    xE: 'vf_trpxb',
+    jE: 'vf_jro_xvg',
+    aE: 'vf_jro_xvg_606_be_arjre',
+    ud: 'vf_qrfxgbc_fnsnev',
+    gd: 'vf_puebzvhz_bcren',
+    Ed: 'arf',
+    dd: 'dhrelFryrpgbe',
+    Td: 'obql',
+    Kd: 'enaqbz',
+    Yd: 'nqrk_gnt_irefvba',
+    zd: '248_2_BS',
+    qd: 'heyCnenzf',
+    Sd: 500,
+    md: ' ',
+    Wd: '/nflap_ybt',
+    vd: '/ybt',
+    id: 'nqqRiragYvfgrare',
+    pd: 'ybnq',
+    Vd: 'frgErdhrfgUrnqre',
+    yd: 'kkkkkkkk-kkkk-4kkk-lkkk-kkkkkkkkkkkk',
+    Rd: 'ev',
+    Dd: 'ei',
+    fd: 'ecc',
+    Qd: 'pnainf',
+    Gd: 'nycun',
+    Xd: 'qrcgu',
+    Ud: 'fgrapvy',
+    cd: 'nagvnyvnf',
+    bd: 'cerzhygvcyvrqNycun',
+    Bd: 'cerfreirQenjvatOhssre',
+    nd: 'snvyVsZnwbeCresbeznaprPnirng',
+    kd: 'trgRkgrafvba',
+    wd: 'JROTY_qroht_eraqrere_vasb',
+    ed: 'abj',
+    Ad: 'gmb',
+    Nd: 'jj',
+    Fd: 'bhgreJvqgu',
+    Pd: 'ju',
+    Hd: 'bhgreUrvtug',
+    od: 'jvj',
+    Od: 'vaareJvqgu',
+    Md: 'jvu',
+    Zd: 'vaareUrvtug',
+    td: 'jk',
+    rd: 'fperraK',
+    Jd: 'jl',
+    Cd: 'fperraL',
+    ld: 'vk',
+    sd: 'jsp',
+    hd: 'zfZnkGbhpuCbvagf',
+    Id: 'wfhn',
+    Ld: 'hfreNtrag',
+    xd: 'ac',
+    jd: 'cq',
+    ad: 'hvq',
+    uT: 'qes',
+    gT: 'ersreere',
+    ET: 'cy',
+    dT: 'at',
+    TT: 'gm',
+    KT: 'ao',
+    YT: 'anc',
+    zT: 'cyngsbez',
+    qT: 'cg',
+    ST: 'riny',
+    mT: 'qz',
+    WT: 'fgevat',
+    vT: 'egg',
+    iT: 'pu_bow',
+    pT: 'aj',
+    VT: 'jq',
+    yT: 'bfpch',
+    RT: 'uvqqra',
+    DT: 'pu_bow_vaqrk',
+    fT: 'jva_xrlf_yratgu',
+    QT: 'pbybe_qrcgu',
+    GT: 'iraqbe',
+    XT: 'ay',
+    UT: 'ayf',
+    cT: 'erp2020',
+    bT: 'c3',
+    BT: 'feto',
+    nT: 'zngpurf',
+    kT: 'baybnqG',
+    wT: 'cntrG',
+    eT: 'fgnegR',
+    AT: 'gena',
+    NT: 'gbFgevat',
+    FT: 'erqverpg',
+    PT: 'frnepu',
+    HT: function(a, b) {
+      return new RegExp(a, b)
+    },
+    oT: 'vfNeenl',
+    OT: 'trgPbagrkg',
+    MT: 'zbm-jroty',
+    ZT: 'trgCnenzrgre',
+    tT: 'ebhaq',
+    rT: 'trgGvzrmbarBssfrg',
+    JT: 'fperra',
+    CT: 'qbphzragRyrzrag',
+    lT: 'cyhtvaf',
+    sT: ':',
+    hT: 'vfCV',
+    IT: 'aVfCV',
+    LT: 'Vagy',
+    xT: 'gvzrMbar',
+    jT: 'uneqjnerPbapheerapl',
+    aT: 'ahzore',
+    uK: 'up',
+    gK: 'qrivprZrzbel',
+    EK: 'vaqrkBs',
+    dK: 'pbybeQrcgu',
+    TK: 'ynathntr',
+    KK: 'csy',
+    YK: 'vfObgOlCntrG',
+    zK: 'zzu',
+    qK: '\\+',
+    SK: '7936mqluho8vl9nwaxe4az',
+    mK: 'wbva',
+    WK: '[kl]',
+    vK: 'jroxvg-3q',
+    iK: 'HAZNFXRQ_ERAQRERE_JROTY',
+    pK: 'frys',
+    VK: 'senzrf',
+    yK: 'pbaarpgvba',
+    RK: 'ynathntrf',
+    DK: ',',
+    fK: 'zngpuZrqvn',
+    QK: 'naprfgbeBevtvaf',
+    GK: '0123456789nopqrs',
+    XK: 'rkcrevzragny-jroty',
+    UK: 'fnu',
+    cK: 'ninvyUrvtug',
+    bK: 'fu',
+    BK: 'fj',
+    nK: 'fnj',
+    kK: 'ninvyJvqgu',
+    wK: 'pj',
+    eK: 'pyvragJvqgu',
+    AK: 'pu',
+    NK: 'pyvragUrvtug',
+    FK: 'svyranzr',
+    PK: 'trbybpngvba',
+    HK: 'erfbyirqBcgvbaf',
+    oK: 'fraqOrnpba',
+    OK: 'pnyyCunagbz',
+    MK: '_cunagbz',
+    ZK: ')',
+    tK: 'pbzzvgYbnqGvzr',
+    rK: 'pbaarpgvbaVasb',
+    JK: 'svavfuQbphzragYbnqGvzr',
+    CK: 'svavfuYbnqGvzr',
+    lK: 'svefgCnvagNsgreYbnqGvzr',
+    sK: 'svefgCnvagGvzr',
+    hK: 'anivtngvbaGlcr',
+    IK: 'acaArtbgvngrqCebgbpby',
+    LK: 'erdhrfgGvzr',
+    xK: 'fgnegYbnqGvzr',
+    jK: 'jnfNygreangrCebgbpbyNinvynoyr',
+    aK: 'jnfSrgpurqIvnFcql',
+    uY: 'jnfAcaArtbgvngrq',
+    gY: 'bofreir',
+    EY: 'e',
+    dY: 'eo',
+    TY: 'jroty2',
+    KY: 'jroty',
+    YY: 'HAZNFXRQ_IRAQBE_JROTY',
+    zY: 'svygre',
+    qY: '(pbybe-tnzhg:',
+    SY: 'ZFPFFZngevk',
+    mY: 'zfFrgVzzrqvngr',
+    WY: 'zfVaqrkrqQO',
+    vY: 'zfCbvagreRanoyrq',
+    iY: 'jroxvgCrefvfgragFgbentr',
+    pY: 'jroxvgGrzcbenelFgbentr',
+    VY: 'jroxvgErfbyirYbpnySvyrFlfgrzHEY',
+    yY: 'OnggrelZnantre',
+    RY: 'jroxvgZrqvnFgernz',
+    DY: 'jroxvgFcrrpuTenzzne',
+    fY: 'NccyrCnlReebe',
+    QY: 'PFFCevzvgvirInyhr',
+    GY: 'Pbhagre',
+    XY: 'trgFgbentrHcqngrf',
+    UY: 'JroXvgZrqvnXrlf',
+    cY: 'ohvyqVQ',
+    bY: 'ZrqvnErpbeqreReebeRirag',
+    BY: 'zbmVaareFperraK',
+    nY: 'PFFZbmQbphzragEhyr',
+    kY: 'PnainfPncgherZrqvnFgernz',
+    wY: 'gura',
+    eY: 'ong',
+    AY: 'bevtva',
+    NY: 'uggcf://syrenceg.pbz',
+    FY: 'QngrGvzrSbezng',
+    PY: 'zfJevgrCebsvyreZnex',
+    HY: 'ZFFgernz',
+    oY: 'zfYnhapuHev',
+    OY: 'zfFnirOybo',
+    MY: 'fnsnev',
+    ZY: 'EGPRapbqrqNhqvbSenzr',
+    tY: '[bowrpg Vagy]',
+    rY: '[bowrpg Ersyrpg]',
+    JY: 'QBZErpgYvfg',
+    CY: 'EGPCrrePbaarpgvbaVprRirag',
+    lY: 'FITTrbzrgelRyrzrag',
+    sY: 'bagenafvgvbapnapry',
+    hY: 'babevragngvbapunatr',
+    IY: 'bevragngvba',
+    LY: 'uggcf://qngngrpubareg.pbz',
+    xY: 'uggcf://qngngrpubar.pbz',
+    jY: 'Tbbtyr',
+    aY: 'Nccyr',
+    uz: 'QrivprZbgvbaRirag',
+    gz: 'batrfgherraq',
+    Ez: 'fgnaqnybar',
+    dz: 'ZrqvnFrggvatfEnatr',
+    Tz: 'FunerqJbexre',
+    Kz: 'ngbo',
+    Yz: 'pnyyonpx',
+    zz: 'nccyl',
+    qz: 'sebzPunePbqr',
+    Sz: 'ZbmNccrnenapr',
+    mz: 'Ersyrpg',
+    Wz: 'grfg',
+    vz: 'fgnghf',
+    iz: 'qrsvarCebcregl',
+    pz: 'punePbqrNg',
+    Vz: 'k',
+    yz: 'nccIrefvba',
+    Rz: 'naqebvq',
+    Dz: 'v',
+    fz: 'inyhr',
+    Qz: 'rahzrenoyr',
+    Gz: 'pbasvthenoyr',
+    Xz: 'nyy',
+    Uz: 'pnpur-wf-gnt',
+    cz: 'erfcbafr',
+    bz: 'punetvatGvzr',
+    Bz: 'qvfpunetvatGvzr',
+    nz: 'fyvpr',
+    kz: 'pyvragVasbezngvba',
+    wz: 'vfVagrefrpgvat',
+    ez: 'erzbir',
+    Az: 'qvfpbaarpg',
+    Nz: 'uvqqra_vsenzr',
+    Fz: 'nffvta'
+
+##### 6.4.2 Second malware signature (search for parts, without whitespace)
+
+    jsp: z,
+    ng: G,
+    ix: q,
+    pt: X,
+    np: k,
+    nw: j,
+    nb: Q,
+    sw: Z,
+    sh: nn,
+    pl: un,
+    wy: J,
+    wx: Y,
+    ww: en,
+    wh: tn,
+    cw: ln,
+    wiw: on,
+    wih: rn,
+    wfc: sn,
+    sah: an,
+    navlng: dn,
+    drf: cn,
+    wgl: yn,
+    tb: K,
+    btz: mn,
+    bto: pn,
+    pnt: vn,
+    pnrc: hn,
+    bml: fn,
+    bmi: gn,
+    vsbl: xn
+
+##### 6.4.3 Third malware signature (search for parts, without whitespace)
+
+    l: opt.zoneId,
+    r: opt.rid,
+    m: opt.isAab,
+    n: opt.request_ab2,
+    e: opt.globalIdPixelURL,
+    p: opt.skipCookieSync,
+    f: opt.asyncCookieSyncWhenSkip,
+    s: opt.isNotRootAdHandler,
+    g: opt.submitFallbackTimeoutMs,
+    b: opt.intentEnabled,
+    y: opt.intentSubmitTimeoutMs,
+    u: opt.intentUrlScheme,
+    w: opt.intentUseDefaultBrowser,
+    h: opt.chromeIOSDirectLink,
+    v: opt.adexOnlineFiltration,
+    o: opt.adexResponseTimeout,
+    t: opt.browserSession,
+    c: opt.requestVar,
+    d: opt.ymid,
+    i: opt.clickSubmit,
+    x: opt.clickSubmitURL,
+    a: opt.lazyPixelSubmit
+
 ## 7. Dynamic analysis of the malware
 
 A disk image is created for a Raspberry Pi and stored (situation before). The malware from the mail is executed (by following the "guidelines") and the resulting disk image is stored again (situation after).
@@ -483,25 +950,20 @@ The start of the malware execution is the email HTML part
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>dier</title>
-     
+
     </head>
     <body>
-       
+
     <div style="text-align: center; max-width: 800px; margin: 0 auto;  padding: 18px; background-color: #ffffff; border-radius: 9px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); padding-left:50px;">
     <div bis_size="{&quot;x&quot;:10,&quot;y&quot;:29,&quot;w&quot;:877,&quot;h&quot;:86,&quot;abs_x&quot;:1017,&quot;abs_y&quot;:290}">
     <p><span style="background: rgb(255, 179, 128);"><span style="font-stretch: normal; font-size: 60px; line-height: normal; font-family: arial;"><b>Pakketbezorging</b></span></span><br />
     <span style="font-family: sans-serif; font-size: 18px; padding: 0px; margin: 0px; line-height: 25.2px;"><span style="font-stretch: normal; font-size: 35px; line-height: normal; font-family: arial;"><b>HALLO roger.pynckels,</b></span></span></p>
 
-
     <p><span style="color: rgb(95, 37, 1); font-family: bahnschrift; font-size: 16px; padding: 5px 1px;"><b>Het spijt ons u te moeten mededelen dat er een logistieke fout is opgetreden op onze<br />
     eindigen met betrekking tot het adres van een pakket dat voor u bestemd is.<br />
     Het pakket is aangekomen bij onze lokale verzendfaciliteit.</b></span></p>
 
-
     <p><span style="color: rgb(0, 0, 0); font-family: &quot;yu gothic ui&quot;; font-size: 25px;"><b>Adrres/detaills verifi&euml;ren en leverinng bevestiggen:</b></span></p>
-
-
-
 
     <h2><span style="color: rgb(0, 0, 0); font-family: &quot;yu gothic ui semibold&quot;; font-size: 18px;">Plan uw bezorging en abonneer u op onze push
     meldingen om te voorkomen dat dit opnieuw gebeurt!</span>
@@ -516,13 +978,18 @@ The start of the malware execution is the email HTML part
     <p><a href="http://frthi.trophytakers.com/6lbwpddvkvw4mngysvqpid9uRUXd0VmZDTmRQOVhxcXRmdDVkanAtNjktMjYxNTUxOTMtMGI2YzAyMTAtMTkxLUR4c3M5d3Y1WUtTb2R6ZGZPUDdG/av3liky0d1z/kfry0mWhDKsY98/172792207251798562080957212313286" style="display: inline-block; padding: 10px 10px; background-color:#ff8000; color: #ffffff; text-decoration: none; border-radius: 15px; font-size: 30px;"> COntroler het afleveraddres</a></p>
     <a href="https://www.emerfggm.org/tycgznqffbyujiq" style="text-decoration: none;color:white;">n</a>
 
-
     </div>
 
     </body>
     </html>
 
-The difference between the before disk contents and the after disk contents are concentrated in the second partition (root file system)
+The difference between the before disk contents and the after disk contents are concentrated in the second partition (root file system). Note that a number of differences are due to a reboot between the 'before' and the 'after' situation in order to take a clean 'before' disk duplicate ('dd').
+
+The meaning of the line prefixes are the following:
+
+    'modified': files changed after the reboot and malware execution
+    'extra':    files not available before the reboot and malware execution, but     available after the reboot and malware execution
+    'missing':  files     available before the reboot and malware execution, but not available after the reboot and malware execution
 
     modified: etc/X11/xorg.conf.d/99-v3d.conf
     modified: etc/X11/xorg.conf.d
@@ -954,7 +1421,6 @@ The difference between the before disk contents and the after disk contents are 
     missing:  ./tmp/.org.chromium.Chromium.i99GIS
     missing:  ./tmp/.org.chromium.Chromium.nA4Aew
 
-TO BE CONTINUED
+## 8. Conclusion
 
-
-
+    A more detailed static analysis is necessary to assess the exact functioning of the malware, but the proposed URL blocking (see propositions at the top of this document) and blocking content with the malware signartures (see 6.4.1, 6.4.2, 6.4.3) should be sufficient to protoct against this malware.
