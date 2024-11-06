@@ -1423,4 +1423,4 @@ The meaning of the line prefixes are the following:
 
 ## 8. Conclusion
 
-    A more detailed static analysis is necessary to assess the exact functioning of the malware, but the proposed URL blocking (see propositions at the top of this document) and blocking content with the malware signartures (see 6.4.1, 6.4.2, 6.4.3) should be sufficient to protoct against this malware.
+A more detailed static analysis is necessary to assess the exact functioning of the malware, but the proposed URL blocking (see propositions at the top of this document) and blocking content with the malware signartures (see 6.4.1, 6.4.2, 6.4.3) should be sufficient to protoct against this malware.
