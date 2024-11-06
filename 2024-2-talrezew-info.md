@@ -985,6 +985,8 @@ The start of the malware execution is the email HTML part
 
 The difference between the before disk contents and the after disk contents are concentrated in the second partition (root file system). Note that a number of differences are due to a reboot between the 'before' and the 'after' situation in order to take a clean 'before' disk duplicate ('dd').
 
+Note that the used attack vectors are probably different for each type of CPU (x86, ARM, ...) and for each type of OS (Linux, Mac, Windows). The 'exercise' below is just an example.
+
 The meaning of the line prefixes are the following:
 
     'modified': files changed after the reboot and malware execution
