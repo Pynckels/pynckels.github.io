@@ -50,7 +50,7 @@ Oct 29th, 2024
 * Block network trafic to and from www.highqualitylinkclicks.com
 * Block network trafic to and from www.craftybyte42.com
 
-#### Teriary security measures
+#### Tertiary security measures
 
 * Block webpages with signatures in major parts of 6.4.1
 * Block webpages with signatures in major parts of 6.4.2
