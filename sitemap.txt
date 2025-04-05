@@ -23,3 +23,5 @@ https://pynckels.github.io/2025-1-Webcam-security.pdf
 https://pynckels.github.io/2025-2-prt1403.jpg
 https://pynckels.github.io/2025-3-pun1442.jpg
 https://pynckels.github.io/2025-4-rdr1442.jpg
+https://pynckels.github.io/2025-5-GNU-Linux
+https://pynckels.github.io/2025-6-tiny-Linux
